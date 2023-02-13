@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  width: 100%;
+  /* min height */
+  background-color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 8px 15px;
+}
+
+.logonavbar{
+  width: 180px;
+}
+
+.headerbtngroup{
+  display: flex;
+  gap: 15px;
+}
+
+.navbtn{
+  font-size: 16px;
+  padding: 6px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.navbtn:hover{
+  border-bottom: 2px solid black;
+}
+
+.sectiontitle{
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.sectiondescription{
+  text-align: center;
+  color: #383838;
+}
+
+.gridcontainer{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "maincontent sidecontent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+
+
+.maincontent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px
+  grid-area: maincontent;
+}
+
+.categorycard{
+  cursor: pointer;
+  transition: 0.4s;
+  width: 280px;
+  height: 420px;
+  border: 2px solid transparent;
+  border-radius: 10px
+}
+
+.categorycard:hover{
+  border-color: black;
+}
+
+.maincardimg{
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+
+.maincategorycardtitle{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+
+.maincategorycarddescription{
+  padding: 6px;
+}
+
+.sidecontent{
+  background-color: #383838;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sidecontent;
+  gap: 20px;
+}
+
+.sidebarcard{
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.sidebarcardimg{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sidebarcardtitle{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.sidebarcard:hover{
+  border-color: gainsboro ;
+}
+
+.footer{
+  width: 100%;
+  /* min height */
+  background-color: #292929;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 15px;
+}
+
+.logofooter{
+  width: 180px;
+}
+
+.footeranchor{
+  color: white;
+  text-decoration: none;
+}
+
+@media(max-width: 660px){
+  .gridcontainer{
+    grid-template-areas: 
+    "maincontent"
+    "sidecontent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sidecontent{
+    min-width: auto;
+  }
+
+  .footeranchor{
+    font-size: 19px;
+  }
+}
+
+@media(max-width: 463px){
+  .header{
+    justify-content: center;
+  }
+
+  .footer{
+    justify-content: center;
+  }
+  
+}
